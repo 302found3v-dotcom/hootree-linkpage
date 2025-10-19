@@ -1,6 +1,4 @@
 ---
-import Background from '../components/Background.astro';
-
 interface Props {
   title?: string;
 }
@@ -26,7 +24,8 @@ const { title } = Astro.props;
     </title>
   </head>
 
-  <body class="gradient-bg">
+  <body>
+    <div class="gradient-bg"></div>
     <slot />
   </body>
 </html>
