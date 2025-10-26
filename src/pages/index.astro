@@ -1,5 +1,5 @@
 ---
-import  Layout from "../layouts/Layout.astro";
+import Layout from "../layouts/Layout.astro";
 import ProfileCard from "../components/ProfileCard.astro";
 import LinkButton from "../components/LinkButton.astro";
 import Footer from "../components/Footer.astro";
@@ -10,29 +10,51 @@ import Mail from "../components/icons/Mail.astro";
 import Link from "../components/icons/Link.astro";
 
 const links = [
-	{ href: "https://302found-flame.vercel.app/", label: "Website", icon: Link, class: " website" },
-	{ href: "https://github.com/302found3v-dotcom", label: "GitHub", icon: GitHub, class: " github" },
-	{ href: "https://twitter.com/302foundev", label: "Twitter", icon: Twitter, class: " twitter" },
-	{ href: "https://www.linkedin.com/in/302foundev", label: "LinkedIn", icon: LinkedIn, class: " linkedin" },
-	{ href: "mailto:jarscode.dev@outlook.com", label: "Email", icon: Mail, class: " email" },
+  {
+    href: "https://302found.dev",
+    label: "Website",
+    icon: Link,
+    class: " website",
+  },
+  {
+    href: "https://github.com/302found3v-dotcom",
+    label: "GitHub",
+    icon: GitHub,
+    class: " github",
+  },
+  {
+    href: "https://twitter.com/302foundev",
+    label: "Twitter",
+    icon: Twitter,
+    class: " twitter",
+  },
+  {
+    href: "https://www.linkedin.com/in/302foundev",
+    label: "LinkedIn",
+    icon: LinkedIn,
+    class: " linkedin",
+  },
+  {
+    href: "mailto:jarscode.dev@outlook.com",
+    label: "Email",
+    icon: Mail,
+    class: " email",
+  },
 ];
 ---
 
 <Layout title="hoobe">
   <section class="container">
-	<ProfileCard
-		name="@302found3v-dotcom"
-    bio="Software Developer | C/C++ Enthusiast. 🚀"
-		avatar="https://media.licdn.com/dms/image/v2/D4D03AQGiSdwge8Oe6g/profile-displayphoto-crop_800_800/B4DZmGEAG1JAAI-/0/1758890821071?e=1762387200&v=beta&t=WLmxAzP_KDVia0QmXh9Kz4qadWpg-PBkn2LJyU_ynD0"
-	/>
-	
-	<section class="links">
-		{links.map(link => (
-		<LinkButton {...link} />
-		))}
-	</section>
+    <ProfileCard
+      name="@302found3v-dotcom"
+      bio="Software Developer | C/C++ Enthusiast. 🚀"
+      avatar="https://media.licdn.com/dms/image/v2/D4D03AQGiSdwge8Oe6g/profile-displayphoto-crop_800_800/B4DZmGEAG1JAAI-/0/1758890821071?e=1762387200&v=beta&t=WLmxAzP_KDVia0QmXh9Kz4qadWpg-PBkn2LJyU_ynD0"
+    />
 
-	<Footer footer="Made with ❤️ by 302found3v-dotcom." />
-	</section>
+    <section class="links">
+      {links.map((link) => <LinkButton {...link} />)}
+    </section>
+
+    <Footer footer="Made with ❤️ by 302found3v-dotcom." />
+  </section>
 </Layout>
-
